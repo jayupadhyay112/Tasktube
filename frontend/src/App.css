@@ -1,0 +1,260 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(to right, #9357C7, #DC12E3);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(76, 117, 175, 0.3);
+  
+}
+
+.contain {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  
+}
+html{
+  height: 100%;
+}
+
+.body {
+  display: flex;
+  margin-top: 5%;
+  width: 90%;
+  justify-self: center;
+  /* height: 100%; */
+}
+.todo{
+  background: none;
+}
+.todo li{
+  width: 45vh;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4%;
+  margin: 4%;
+  background: none;
+  background-color: #f0f0f0;
+  border-radius: 100px
+}
+ .container ul {
+  list-style-type: none;
+  background: none;
+  color: black;
+  align-items: center;
+
+}
+
+#left {
+  width: 50%;
+  height: 50vh;
+  background: rgba(76, 117, 175, 0.3);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+  border-radius: 7vmin;
+}
+
+#right {
+  width: 50%;
+  background: rgba(76, 117, 175, 0.3);
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7vmin;
+}
+.ulList{
+   overflow-y: scroll;
+   height: 50vh;
+  scrollbar-width: none;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;;
+}
+#todoList li {
+   width: 100%; ;
+  height: 4vmin;
+  margin: 4vmin;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+
+}
+
+#left h1,
+#left h2,
+#left h3 {
+  background: none;
+  color: #fff;
+}
+
+#Try {
+  background: #fff;
+  width: 15vmin;
+  height: 7vmin;
+  border: none;
+  font-size: 16px;
+  border-radius: 2vmin;
+
+}
+
+.container {
+  width: 150vmin;
+  margin-top: 50px;
+  margin-left: 45vmin;
+  color: white;
+  padding: 2vmin;
+  border-radius: 8px;
+  justify-content: center;
+  /* overflow-y: scroll;
+  scrollbar-width: none; */
+  height: 70vh;
+
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+  background: none;
+  
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  background: none;
+}
+
+input[type="text"],
+input[type="password"] ,
+input[type="email"] 
+{
+  flex: 1;
+  padding: 10px;
+  border-radius: 2vmin;
+  border: none;
+  color: black;
+  background: #fff;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+
+li button {
+  border: none;
+
+}
+#login{
+  border-radius: 4vmin;
+  border: none;
+  background: #fff;
+  font-weight: bold
+}
+.logo{
+ background: none;
+ color: #fff;
+ display: flex;
+ align-items: center;
+ gap: 20px;
+}
+img{
+  width: 50px;
+  height: 50px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 83vh;
+  width: 30vmin;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  position: fixed;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+  background: none;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.add-task-sidebar {
+  text-align: center;
+}
+
+.add-task-btn-sidebar {
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#check{
+  width: 4vmin;
+  height: 4vmin;
+  margin-left: 2vmin;
+  accent-color: grey;
+}
+.profile-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.profile-popover {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+#profile{
+  border: none;
+  border-radius: 100px;
+  background: #fff;
+ color: #000000;
+ font-size: 28px;
+}
+
