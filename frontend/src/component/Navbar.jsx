@@ -13,7 +13,13 @@ const [name, setname] = useState(localStorage.getItem('name') );
             <div className="header">
                 <div className="logo">
                     <img src={logo} style={{ borderRadius: 100, background: '#fff' }} />
-                    <h2 id="name" style={{ background: 'none' }}>  TaskTube</h2>
+                    <h2 id="name" style={{ background: 'none' }}><Link to ='/' 
+                    style={{
+                        textDecoration:'none',
+                        color:'#fff',
+                        background:'none',
+                        fontSize:'34px'
+                    }}>TaskTube</Link></h2>
                 </div>
                 <nav className="contain">
                     <Link to="/Home" style={{ background: 'none', color: '#fff', textDecoration: 'none', fontSize: '20px' }}>Home</Link>

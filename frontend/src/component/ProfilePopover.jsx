@@ -27,18 +27,18 @@ const ProfilePopover = ({ name }) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative" style={{ background:'none'}}>
       {/* Profile Button */}
       <button
         id="profile"
         onClick={togglePopover}
         style={{
-          width: 40,
-          height: 40,
+          width: 50,
+          height: 50,
           borderRadius: '50%',
           backgroundColor: 'white',
           fontWeight: 'bold',
-          fontSize: 18,
+          fontSize: 24,
           border: 'none',
           cursor: 'pointer',
         }}

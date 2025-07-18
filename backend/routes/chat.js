@@ -16,16 +16,19 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    // Respect rate limits: wait before each request (optional)
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    console.log('Prompt:', prompt);
+
+    // Optional delay to respect quota
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     const result = await model.generateContent({
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
     });
 
-    const response = await result.response;
-    const text = await response.text();
+    const response = result.response;
+    const text = response.text();
 
+    console.log('Gemini Response:', text);
     res.json({ content: text });
   } catch (err) {
     console.error('Gemini API Error:', err.message);

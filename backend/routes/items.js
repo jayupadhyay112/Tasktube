@@ -6,10 +6,12 @@ const router = express.Router();
 // ✅ GET all todos (optionally by user)
 router.get('/', async (req, res) => {
   try {
-    // If you're using auth, replace this with: req.user.id
-    const todos = await Todo.find({userId:req.user.id}); // or add filter: { userId: req.user.id }
-    res.json(todos);
-  } catch (err) {
+    const { task, dueDate, week } = req.body;
+
+    if (!task || !dueDate || !week) {
+      return res.status(400).json({ error: 'Task, due date, and week are required' });
+    } }
+    catch (err) {
     res.status(500).json({ error: 'Failed to fetch todos' });
   }
 });
@@ -22,7 +24,9 @@ router.post('/', async (req, res) => {
     const newItem = new Todo({
       todo: req.body.task,      // Make sure this matches the frontend
       isCompleted: false,
-      userId: req.user.id    // optional: if using user auth
+      userId: req.user.id ,
+      dueDate: new Date(req.body.dueDate) ,  // optional: if using user auth
+      week: parseInt(req.body.week)
     });
     const savedItem = await newItem.save();
     res.json(savedItem);

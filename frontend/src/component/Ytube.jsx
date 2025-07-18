@@ -56,7 +56,7 @@ function App() {
               frameBorder="0"
               allowFullScreen
               title={video.snippet.title}
-              style={{}}
+              style={{ display:'flex'}}
             ></iframe>
             <h4 style={{width:'auto'}}>{video.snippet.title}</h4>
           </div>
